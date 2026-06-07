@@ -1,0 +1,28 @@
+名称：构建调整
+
+在:
+  推:
+    分支：[ 主 ]
+  工作流触发:
+
+工作:
+  构建:
+    运行于：macos-latest
+    步骤:
+      - 名称: 检出源
+        使用：actions/checkout@v3
+
+      - 名称: 设置 Theos
+        使用：roothide/setup-theos@v1
+        与：
+          theos-src：https：//github.com/theos/theos.git
+
+      - 名称: 构建调整
+        运行： |
+          制作软件包 FINALPACKAGE=1
+          
+      - 名称: 上传神器
+        使用：actions/upload-artifact@v3
+        与：
+          name：强制绕过-调整
+          路径：packages/*.deb
