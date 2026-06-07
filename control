@@ -1,0 +1,9 @@
+Package: com.yourname.forcebypass
+Name: ForceBypass
+Depends: mobilesubstrate
+Version: 1.0.0
+Architecture: iphoneos-arm
+Description: Force enable dwrg.dylib anti-ban features
+Maintainer: Cascade
+Author: Cascade
+Section: Tweaks
